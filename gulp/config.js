@@ -79,7 +79,7 @@ module.exports = function () {
     testing: {
       host:        argv.host,
       username:    argv.username,
-      projectPath: 'preview.ginetta.net/ginetta-academy/'
+      projectPath: 'preview.ginetta.net/ginetta-academy/',
       releasePath: argv.path,
       privateKey:  argv.privateKey
     }
