@@ -1,5 +1,6 @@
 'use strict';
 var gulp        = require('gulp');
+var runSeq      = require('run-sequence')
 var config      = require('./gulp/config')();
 var t           = require('./gulp/utils/tasksHelpers')(gulp, config);
 
@@ -76,7 +77,10 @@ gulp.task('serve', t.getTask('serve'));
 // Lints the gulp tasks
 gulp.task('tasks', t.getTask('tasks'));
 
-// What happens when just running 'gulp'
+gulp.task('heroku:production', function(){
+  runSeq('clean', 'build', 'minify')
+})
+
 gulp.task(
   'default',
   gulp.series(
@@ -84,3 +88,4 @@ gulp.task(
     'serve'
   )
 );
+
