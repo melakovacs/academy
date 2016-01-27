@@ -8,6 +8,29 @@ block meta
   //- TODO: add you page meta tags
 
 block body
-  .about.l-absolute-centered
+  .about
     +header(data.index.header)
       != helpers.markdown(data.index.content)
+
+  .benefits
+    header= data.index.benefits.title
+    ul
+      each val in data.index.benefits.content
+        li= val
+
+  .testimonial
+    h1= data.index.testimonial.text
+    h2= data.index.testimonial.name
+
+  .competences
+    h1= data.index.competences.title
+    h2= data.index.competences.intro
+    ul
+      each item in data.index.competences.items
+        li
+          h1= item.subtitle
+          p= item.text
+          img(src=item.image)
+
+  .footer
+    p= data.index.footer
