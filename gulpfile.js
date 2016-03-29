@@ -77,9 +77,7 @@ gulp.task('serve', t.getTask('serve'));
 // Lints the gulp tasks
 gulp.task('tasks', t.getTask('tasks'));
 
-gulp.task('heroku:production', function(){
-  runSeq('clean', 'build', 'minify')
-})
+// gulp.tasks('heroku:prod', [default]);
 
 gulp.task(
   'default',

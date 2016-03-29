@@ -8,29 +8,52 @@ block meta
   //- TODO: add you page meta tags
 
 block body
-  .about
-    +header(data.index.header)
-      != helpers.markdown(data.index.content)
+  section.about
+    .row
+      .small-8.columns.small-centered
+        .teaser
+          p= data.index.header.teaser
+        .header
+          h1= data.index.header.title
+          p= data.index.header.subtitle
+          // p= data.index.content
 
-  .benefits
-    header= data.index.benefits.title
-    ul
-      each val in data.index.benefits.content
-        li= val
+  section.benefits
+    .row
+      .small-8.columns.small-centered
+        h2= data.index.benefits.title
+        ul
+          each val in data.index.benefits.content
+            li= val
 
-  .testimonial
-    h1= data.index.testimonial.text
-    h2= data.index.testimonial.name
+  section.testimonial
+    .row
+      .small-8.columns.small-centered
+        .row
+          .small-2.columns
+            img(src=data.index.testimonial.image).avatar
+          .small-10.columns
+            blockquote= data.index.testimonial.text
+            strong= data.index.testimonial.name
 
-  .competences
-    h1= data.index.competences.title
-    h2= data.index.competences.intro
-    ul
-      each item in data.index.competences.items
-        li
-          h1= item.subtitle
-          p= item.text
-          img(src=item.image)
+  section.competences
+    .row
+      .small-8.columns.small-centered
+        .competences-header
+          h2= data.index.competences.title
+          p= data.index.competences.intro
+        .competences-listing
+          ul
+            each item in data.index.competences.items
+              .row
+                li
+                .small-3.columns
+                  img(src=item.image)
+                .small-9.columns
+                  h3= item.subtitle
+                  p= item.text
 
-  .footer
-    p= data.index.footer
+  footer
+    .row
+      .small-8.columsn.small-centered.text-center
+        p= data.index.footer

@@ -1,12 +1,12 @@
+$padding-top-bottom: 100px 0;
+
 body, html {
   margin: 0;
   padding: 0;
-
-  color: $c-white;
-  text-align: center;
+  font-family: $base-font-family;
+  color: $c-black;
   line-height: 1.5;
 
-  background: $c-eigengrau;
 
   /**
    * PX fallback for IE8, Opera Mini and older Androids
@@ -30,15 +30,77 @@ a {
   color: $c-silver;
 }
 
+section {
+  padding: $padding-top-bottom;
+  margin: 0;
+
+  p {
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 800 !important;
+}
+
+h2 {
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+blockquote {
+  font-size: 22px;
+}
+
 .about {
-  // overflow: hidden;
-  // background-color: #16161D;
-  // height: 100vh;
-  //   position: relative;
-  overflow: hidden;   position: relative; padding: 5% 10%;
+  background-color: $c-pink;
+  color: $c-black;
 }
 
-.content {
-  background: $c-white;
+.benefits {
+  background-color: $c-white;
+  color: $c-black;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+  li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+}
+
+.testimonial {
+  background-color: $c-grau;
+}
+
+.competences {
+  background-color: $c-blue;
+  color: $c-black;
+
+  .competences-listing {
+
+    li {
+      padding: 20px 0;
+    }
+  }
+
+  .competences-header {
+    padding: $padding-top-bottom;
+  }
+}
+
+footer {
+  padding: $padding-top-bottom
+}
