@@ -19,15 +19,7 @@ block body
           p= data.index.header.subtitle
     .row.padded.text-center
       .large-4.columns.large-centered.small-8.small-centered
-        .signup
-          .input-group
-            input.input-group-field(
-            type='text'
-            placeholder='Get notified when we launch')
-            .input-group-button
-              input.button(
-              type='button'
-              value='Subscribe')
+        include ../partials/signup.jade
 
   section.benefits
     .row
@@ -73,16 +65,7 @@ block body
         h2= data.index.join.title
     .row.padded.text-center
       .large-4.columns.large-centered.small-8.small-centered
-        .signup
-          .input-group
-            input.input-group-field(
-            type='text'
-            placeholder='Get notified when we launch')
-            .input-group-button
-              input.button(
-              type='button'
-              value='Subscribe')
-
+        include ../partials/signup.jade
 
   footer
     .row
