@@ -11,33 +11,44 @@ block body
   section.about
     .row
       .small-6.small-centered.medium-6.medium-centered.large-2.large-uncentered.columns
-        img(src=data.index.header.logo).float-left
-    .row
-      .small-8.columns.small-centered
-        .teaser
-          p= data.index.header.teaser
+        img(src=data.index.header.logo)
+    .row.padded
+      .small-8.columns.small-centered.text-center
         .header
           h1= data.index.header.title
           p= data.index.header.subtitle
-          // p= data.index.content
+    .row.padded.text-center
+      .large-4.columns.large-centered.small-8.small-centered
+        .signup
+          .input-group
+            input.input-group-field(
+            type='text'
+            placeholder='Get notified when we launch')
+            .input-group-button
+              input.button(
+              type='button'
+              value='Subscribe')
 
   section.benefits
     .row
-      .small-8.columns.small-centered
+      .small-8.columns.small-centered.text-center
         h2= data.index.benefits.title
         ul
           each val in data.index.benefits.content
-            li= val
+            .large-4.columns
+              img(src='/content/images/index/sketchnote.jpg')
+              li= val
 
   section.testimonial
     .row
-      .small-8.columns.small-centered
-        .row
-          .large-2.medium-2.small-12.columns.large-uncentered.medium-uncentered.small-centered
-            img(src=data.index.testimonial.image).avatar
-          .large-10.medium-10.small-12.columns
-            blockquote= data.index.testimonial.text
-            strong= data.index.testimonial.name
+      .large-8.columns.large-centered.text-center
+        blockquote= data.index.testimonial.text
+    .row.padded
+      .large-8.columns.large-centered.text-center
+        img(src=data.index.testimonial.image).avatar
+    .row
+      .large-8.columns.large-centered.text-center
+        strong= data.index.testimonial.name
 
   section.competences
     .row
@@ -56,7 +67,38 @@ block body
                   h3= item.subtitle
                   p= item.text
 
+  section.join
+    .row.padded.text-center
+      .small-8.columns.small-centered.text-center
+        h2= data.index.join.title
+    .row.padded.text-center
+      .large-4.columns.large-centered.small-8.small-centered
+        .signup
+          .input-group
+            input.input-group-field(
+            type='text'
+            placeholder='Get notified when we launch')
+            .input-group-button
+              input.button(
+              type='button'
+              value='Subscribe')
+
+
   footer
     .row
-      .small-8.columsn.small-centered.text-center
-        p= data.index.footer
+      .small-4.columns
+        ul
+          each item in data.index.footer.links
+            li= item
+      .small-4.columns
+        ul
+          each item in data.index.footer.social
+            li= item
+      .small-4.columns
+        ul
+          each item in data.index.footer.address
+            li= item
+
+    .row.padded
+      .small-12.columns.small-centered.text-center
+        img(src='/content/images/index/ginetta_logo.svg')

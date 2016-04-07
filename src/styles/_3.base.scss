@@ -26,6 +26,10 @@ body, html {
   }
 }
 
+.padded {
+  padding: 50px 0;
+}
+
 a {
   color: $c-silver;
 }
@@ -61,6 +65,10 @@ blockquote {
   font-size: 22px;
 }
 
+.button {
+  background-color: $c-black !important;
+}
+
 .about {
   text-shadow: #555555 1px 1px;
   padding: 50px 0 100px 0;
@@ -77,6 +85,10 @@ blockquote {
   }
 
   .header {
+    color: white;
+  }
+
+  p {
     color: white;
   }
 }
@@ -110,12 +122,10 @@ ul {
       padding: 20px 0;
     }
   }
-
-  .competences-header {
-    padding: $padding-top-bottom;
-  }
 }
 
 footer {
-  padding: $padding-top-bottom
+  color: white;
+  padding: $padding-top-bottom;
+  background-color: #16161d;
 }

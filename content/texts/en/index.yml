@@ -8,7 +8,7 @@ index:
     E-Mail Signup form here
 
   benefits:
-    title: "You will become a user experience practitioner"
+    title: "Become a user experience practitioner"
     content:
       - "Get access to a community of passionate developers, designers and doers."
       - "Learn the basics, step by step, hands-on from professionals."
@@ -35,4 +35,18 @@ index:
         text: "Build a clickable prototype and test it with end users to evaluate the simplicity and usefulness of your product. Incorporate the user feedback and improve your product."
         image: "content/images/detail/competences/visual-design.svg"
 
-  footer: "Made with music and love by Melanie at Ginetta"
+  join:
+    title: "Sign up now to stay up-to-date!"
+
+  footer:
+    links:
+      - "ginetta.net"
+    social:
+      - "Facebook"
+      - "Twitter"
+      - "Instagram"
+      - "GitHub"
+    address:
+      - "Lutherstrasse 32"
+      - "CH – 8004 Zürich"
+      - "+41 79 336 60 00"
