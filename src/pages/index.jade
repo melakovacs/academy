@@ -10,7 +10,7 @@ block meta
 block body
   section.about
     .row
-      .small-2.columns
+      .small-6.small-centered.medium-6.medium-centered.large-2.large-uncentered.columns
         img(src=data.index.header.logo).float-left
     .row
       .small-8.columns.small-centered
@@ -33,9 +33,9 @@ block body
     .row
       .small-8.columns.small-centered
         .row
-          .small-2.columns
+          .large-2.medium-2.small-12.columns.large-uncentered.medium-uncentered.small-centered
             img(src=data.index.testimonial.image).avatar
-          .small-10.columns
+          .large-10.medium-10.small-12.columns
             blockquote= data.index.testimonial.text
             strong= data.index.testimonial.name
 
@@ -50,9 +50,9 @@ block body
             each item in data.index.competences.items
               .row
                 li
-                .small-3.columns
+                .small-12.columns.large-3.medium-3
                   img(src=item.image)
-                .small-9.columns
+                .small-12.columns.large-9.medium-9
                   h3= item.subtitle
                   p= item.text
 
